@@ -1,0 +1,42 @@
+//  Ulilites SCSS
+.container {
+    max-width: $container;
+    padding-left: $gutter-x;
+    padding-right: $gutter-x;
+    margin: 0 auto;
+    @include tablet {
+        padding-left: $gutter-x-xs;
+        padding-right: $gutter-x-xs;
+    }
+}
+
+ 
+
+.collapse {
+    overflow: hidden;
+    transition: height 300ms cubic-bezier(.49, .025, .49, 1);
+    &:not(.active)  {
+        height: 0;
+    }
+    &.sub-menu-wrapper {
+        @include min-laptop {
+            height: auto !important;
+        }
+    }
+}
+
+[data-collapse],
+[data-toggler] {
+    & .collapse-arrow {
+        transition: 300ms all cubic-bezier(.49, .025, .49, 1);
+    }
+    &.active .collapse-arrow {
+        transform: rotate(-180deg);
+    }
+}
+ 
+ 
+.hide-scroll {
+    overflow: hidden;
+    height: 100vh;
+}

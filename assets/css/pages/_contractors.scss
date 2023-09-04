@@ -1,0 +1,481 @@
+// Contractors SCSS
+
+.contractors-section {
+    z-index: 10;
+    overflow: hidden;
+    @include mobile {
+        padding-top: 96px;
+    }
+    & .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: -10;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        & .circle {
+            position: absolute;
+            width: 1576px;
+            height: 1576px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: none;
+            margin-top: -20px;
+            @include mobile {
+                width: 789px;
+                height: 789px;
+            }
+        }
+        & .tags {
+            position: absolute;
+            width: 1440px;
+            height: 1100px;
+            bottom: 69px;
+            left: 50%;
+            transform: translateX( -50%);
+            max-width: none;
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+    &::after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 83px;
+        position: absolute;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+        @include mobile {
+            height: 114px;
+        }
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 893px;
+        justify-content: center;
+        @include laptop {
+            height: 830px;
+        }
+        @include mobile {
+            height: auto;
+            padding-bottom: 40px;
+            position: relative;
+            z-index: 20;
+        }
+        & .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 710px;
+            width: 100%;
+            & h1 {
+                margin-bottom: 16px;
+            }
+            & p {
+                margin-bottom: 48px;
+                max-width: 530px;
+                @include mobile {
+                    margin-bottom: 24px;
+                }
+            }
+            & .button {
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.highlighs-section {
+    padding: 80px 0;
+    @include tablet {
+        padding: 64px 0;
+    }
+    @include mobile {
+        padding: 32px 0;
+    }
+    & .block {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include mobile {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        & li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            padding: 0 32px;
+            @include mobile {
+                padding: 0;
+            }
+            &:not(:last-child) {
+                border-right: 1px solid $gray-50;
+                @include mobile {
+                    padding-bottom: 16px;
+                    border-right: none;
+                    border-bottom: 1px solid $gray-50;
+                }
+            }
+        }
+    }
+}
+
+.statistics-section {
+    padding: 120px 0;
+    position: relative;
+    z-index: 0;
+    @include laptop {
+        padding: 80px 0;
+    }
+    @include tablet {
+        padding: 64px 0;
+    }
+    @include mobile {
+        padding: 32px 0;
+    }
+    & .bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 1770px;
+        height: 821px;
+        content: '';
+        z-index: -10;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        & .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+            & li {
+                background-color: $gray-25;
+                border: 1px solid $gray-50;
+                border-radius: 16px;
+                padding: 24px 16px;
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+                @include mobile {
+                    height: 160px;
+                }
+                & .factoids {
+                    color: $primary-100;
+                    margin-bottom: 4px;
+                }
+                & img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+.calculate-section {
+    padding: 120px 0;
+    @include laptop {
+        padding: 80px 0;
+    }
+    @include tablet {
+        padding: 64px 0;
+    }
+    @include mobile {
+        padding: 32px 0;
+    }
+    & h2 {
+        @include mobile {
+            text-align: center;
+            padding: 0 20px;
+        }
+    }
+    & .block {
+        margin-top: 48px;
+        border-radius: 24px;
+        border: 1px solid $gray-100;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+        @include tablet {
+            grid-template-columns: 1fr;
+        }
+        @include mobile {
+            margin-top: 32px;
+        }
+        & .parameters {
+            background-color: $gray-25;
+            padding: 40px 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            @include mobile {
+                gap: 24px;
+            }
+            & .divider {
+                width: 100%;
+                background-color: #e6e6e7;
+                height: 1px;
+                display: block;
+            }
+            & .item {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                @include mobile {
+                    gap: 12px;
+                }
+                & .values {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                & .slider {
+                    height: 24px;
+                }
+            }
+        }
+        & .results {
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            @include mobile {
+                padding: 24px 16px 16px;
+                gap: 4px;
+            }
+            & .top {
+                padding: 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                border: 1px solid $primary-25;
+                border-radius: 12px;
+                & li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+            & .bottom {
+                display: flex;
+                flex-direction: column;
+                & li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 25px 0;
+                    @include mobile {
+                        padding: 20px 0;
+                    }
+                    & .with-icon {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+                        @include mobile {
+                            font-size: 14px;
+                        }
+                    }
+                    & .caption-2 {
+                        white-space: nowrap;
+                    }
+                    &:not(:last-child) {
+                        border-bottom: 1px solid $gray-100;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.client-section {
+    padding: 120px 0 220px;
+    position: relative;
+    z-index: 10;
+    @include laptop {
+        padding: 80px 0 220px;
+    }
+    @include tablet {
+        padding: 64px 0;
+    }
+    @include mobile {
+        padding: 32px 0;
+    }
+    &.spacing-sm {
+        padding: 120px 0;
+        @include laptop {
+            padding: 80px 0;
+        }
+        @include tablet {
+            padding: 64px 0;
+        }
+        @include mobile {
+            padding: 32px 0;
+        }
+    }
+    & h2 {
+        @include mobile {
+            text-align: center;
+            padding: 0 20px;
+        }
+    }
+    &.bg-gradient-10 {
+        padding: 120px 0;
+        @include laptop {
+            padding: 80px 0;
+        }
+        @include tablet {
+            padding: 64px 0;
+        }
+        @include mobile {
+            padding: 48px 0;
+        }
+        & .block {
+            gap: 32px;
+            @include mobile {
+                gap: 16px;
+            }
+            & .item {
+                padding: 32px;
+                border: 1px solid $gray-50;
+                gap: 24px;
+                @include mobile {
+                    padding: 24px 16px;
+                }
+                & .body-1 {
+                    margin-bottom: 20px;
+                    @include mobile {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+    & .block {
+        margin-top: 64px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        @include tablet {
+            scroll-snap-type: x mandatory;
+            margin-top: 48px;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+        @include mobile {
+            margin-top: 24px;
+        }
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        & .item {
+            background-color: $gray-25;
+            padding: 16px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            @include tablet {
+                scroll-snap-align: start;
+                min-width: 300px;
+            }
+            & .rating {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            & .caption {
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    }
+}
+
+.customer-section {
+    padding: 80px 0;
+    @include mobile {
+        padding: 48px 0;
+    }
+    & .block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        @include tablet {
+            align-items: center;
+            text-align: center;
+        }
+        & h2 {
+            margin-bottom: 16px;
+            max-width: 600px;
+            @include laptop {
+                max-width: 540px;
+            }
+        }
+        & p {
+            margin-bottom: 64px;
+            max-width: 600px;
+            @include laptop {
+                max-width: 540px;
+            }
+        }
+        & .button {
+            @include mobile {
+                width: 100%;
+            }
+        }
+        & .mobile-mockups {
+            position: absolute;
+            right: 0;
+            bottom: -60px;
+            @include tablet {
+                position: static;
+                margin-top: 64px;
+            }
+            & img {
+                @include laptop {
+                    width: 460px;
+                }
+            }
+        }
+        & .wooden-mockups {
+            position: absolute;
+            right: -24px;
+            bottom: -80px;
+            @include tablet {
+                position: relative;
+                margin-top: 40px;
+                margin-bottom: -80px;
+                right: -48px;
+                bottom: 0;
+            }
+            & img {
+                @include laptop {
+                    width: 460px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+// QA SCSS
+.qa-section {
+    padding: 80px 0;
+    @include tablet {
+        padding: 64px 0;
+    }
+    @include mobile {
+        padding: 48px 0;
+    }
+    & .block {
+        max-width: 790px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        @include mobile {
+          gap: 96px;
+        }
+        & .listing {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            & li {
+                background-color: $gray-25;
+                border: 1px solid $gray-50;
+                padding: 16px 68px 16px 20px;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                & .trigger {
+                    text-align: left;
+                    cursor: pointer;
+                    color: $gray-900;
+                    padding: 0;
+                    border-style: none;
+                    background-color: transparent;
+                    display: flex;
+                    width: 100%;
+                    align-items: center;
+                    &.active {
+                        & .collapse-arrow {
+                            &::after {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                    & .collapse-arrow {
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        flex-shrink: 0;
+                        position: relative;
+                        margin-left: auto;
+                        margin-right: -48px;
+                        &::after,
+                        &::before {
+                            content: '';
+                            background-color: $primary-75;
+                            position: absolute;
+                            border-radius: 4px;
+                        }
+                        &::before {
+                            width: 100%;
+                            height: 2px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                        &::after {
+                            width: 2px;
+                            height: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+
+                    }
+                }
+                & .collapse {
+                    & .body-3 {
+                        padding-top: 8px;
+                    }
+                }
+            }
+
+        }
+        & .more-question {
+            display: flex;
+            flex-direction: column;
+            padding: 44px;
+            align-items: center;
+            text-align: center;
+            background-color: $gray-25;
+            border: 1px solid $gray-50;
+            border-radius: 16px;
+            @include mobile {
+              padding: 24px;
+            }
+            & .h2 {
+                margin-bottom: 16px;
+            }
+            & p {
+                margin-bottom: 32px;
+            }
+            & .button {
+              @include mobile {
+                width: 100%;
+              }
+            }
+        }
+    }
+}

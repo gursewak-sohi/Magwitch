@@ -1,0 +1,84 @@
+//  Button SCSS
+.btn {
+    cursor: pointer;
+    font-family: $font-Dm;
+    border: none;
+    transition: $btn-transition;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: center;
+    flex-shrink: 0;
+    & svg {
+        flex-shrink: 0;
+        & * {
+            transition: $btn-transition;
+        }
+    }
+    &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
+
+.btn-md {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    padding: 12px 22px;
+    border-radius: 40px;
+}
+
+.btn-lg {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+    padding: 16px 24px;
+    border-radius: 8px;
+}
+
+.btn-gradient {
+    background: linear-gradient(141deg, rgba($gradient-start, 1) 0%, rgba($gradient-stop, 1) 100%);
+    color: $white;
+    &:hover {
+        color: $white;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn-light {
+    background-color: $white;
+    color: $primary-100;
+    &:hover {
+        color: $primary-100;
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
+.btn-link {
+    column-gap: 14px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.link-primary-100 {
+    color: $primary-100;
+    &:hover {
+        color: $primary-100;
+    }
+}
+
+.link-green {
+    color: $green;
+    &:hover {
+        color: $green;
+    }
+}

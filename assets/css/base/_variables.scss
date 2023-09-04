@@ -1,0 +1,54 @@
+// Variable SCSS
+// Fonts
+$font-Dm: ('DM Sans', sans-serif);
+// Colors
+$gray-25: #F9F9F9;
+$gray-50: #F2F2F3;
+$gray-100: #E6E6E7;
+$gray-200: #CCCCCF;
+$gray-300: #B3B3B7;
+$gray-400: #808086;
+$gray-500: #67666E;
+$gray-600: #4D4D56;
+$gray-700: #34343E;
+$gray-800: #1A1A26;
+$gray-900: #01010E;
+
+$gradient-start: #42D1D6;
+$gradient-stop: #002DFF;
+
+$primary-100: #1F44DD; //Brand
+$primary-75: #5773E5;  
+$primary-50: #8FA1EE;
+$primary-25: #D2DAF8;
+$primary-15: #F3EFFF;
+
+$purple: #7C24C2;
+$red: #A80E1C;
+$brown: #8D4408;
+$blue: #134EAD;
+$light-blue: #EFF2FF;
+$green: #017130;
+$light-green: #DEFCEC;
+ 
+$white: #FFFFFF; 
+$link: #1F44DD;
+// Breakpoints
+$mobile-width: 767px;
+$tablet-width: 991px;
+$laptop-width: 1199px;
+$desktop-width: 1399px;
+// Container Sizes
+$container: 1280px;
+$gutter-x: 40px;
+$gutter-lg-x: 32px;
+$gutter-x-xs: 16px;
+// Transition
+$link-transition: 200ms all cubic-bezier(.49, .025, .49, 1);
+$btn-transition: 300ms background-color cubic-bezier(.49, .025, .49, 1),
+300ms color cubic-bezier(.49, .025, .49, 1),
+300ms border-color cubic-bezier(.49, .025, .49, 1),
+300ms opacity cubic-bezier(.49, .025, .49, 1),
+300ms box-shadow cubic-bezier(.49, .025, .49, 1),
+300ms stroke cubic-bezier(.49, .025, .49, 1),
+300ms fill cubic-bezier(.49, .025, .49, 1);

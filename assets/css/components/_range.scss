@@ -1,0 +1,63 @@
+// Range Slider
+.c-range[type='range'] {
+    width: 100%;
+    height: 24px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    margin: 0;
+}
+
+.c-range[type='range']::-webkit-slider-runnable-track {
+    height: 10px;
+    -webkit-appearance: none;
+    background: $gray-50;
+    margin-top: 2px;
+    border-radius: 4px;
+}
+
+.c-range[type='range']::-webkit-slider-thumb {
+    position: relative;
+    top: -8px;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: linear-gradient(141deg, rgba($gradient-start, 1.0) 0%, rgba($gradient-stop, 1.0) 100%);
+    border-radius: 50%;
+    border: 5px solid $white;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px -2px rgba(16, 24, 40, 0.1), 0 2px 4px -2px rgba(16, 24, 40, 0.06);
+}
+
+/** FF*/
+.c-range[type="range"]::-moz-range-progress {
+    background: linear-gradient(141deg, rgba($gradient-start, 1.0) 0%, rgba($gradient-stop, 1.0) 100%);
+    height: 8px;
+    border-radius: 10px;
+}
+.c-range[type="range"]::-moz-range-track {
+    background: $gray-50;
+    height: 8px;
+    border-radius: 10px;
+}
+.c-range[type='range']::-moz-range-thumb {
+    position: relative;
+    top: -8px;
+    width: 25px;
+    height: 25px;
+    -webkit-appearance: none;
+    cursor: ew-resize;
+    background: linear-gradient(141deg, rgba($gradient-start, 1.0) 0%, rgba($gradient-stop, 1.0) 100%);
+    border-radius: 50%;
+    border: 5px solid $white;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px -2px rgba(16, 24, 40, 0.1), 0 2px 4px -2px rgba(16, 24, 40, 0.06);
+
+}
+/* IE*/
+.c-range[type="range"]::-ms-fill-lower {
+  background: linear-gradient(141deg, rgba($gradient-start, 1.0) 0%, rgba($gradient-stop, 1.0) 100%);
+}
+.c-range[type="range"]::-ms-fill-upper {
+    background-color: transparent;
+}
